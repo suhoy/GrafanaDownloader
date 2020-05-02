@@ -11,14 +11,14 @@ Works with Grafana v6.4.4 on Java 8
 java -jar GrafanaDownloader.jar -start 2020-02-20T20:00 -finish 2020-02-20T23:00 -config C:\User\config.txt -out Report
 
 ### Config example
-######Connection props
-grafana.protocol=http
-grafana.host=localhost
-grafana.port=3000
-grafana.login=admin
-grafana.password=admin
-grafana.token=eyJrIjoiajdWSzlkY2Z2Y0V5QjU0cmlkWU83S0tVVUIweE9VY00iLCJuIjoiYWRtaW4xIiwiaWQiOjF9
-
+'#'Connection props  
+grafana.protocol=http  
+grafana.host=localhost  
+grafana.port=3000  
+grafana.login=admin  
+grafana.password=admin  
+grafana.token=eyJrIjoiajdWSzlkY2Z2Y0V5QjU0cmlkWU83S0tVVUIweE9VY00iLCJuIjoiYWRtaW4xIiwiaWQiOjF9  
+  
 ######Metric props
 panels.count=3
 panels.height=500
