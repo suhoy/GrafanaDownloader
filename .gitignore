@@ -32,3 +32,4 @@ dist/
 nbdist/
 .nb-gradle/
 **/test/
+config.txt

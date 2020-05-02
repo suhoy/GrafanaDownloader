@@ -34,7 +34,7 @@ metric1.panelId=2
 metric1.orgID=1  
 metric1.output=test1.jpg  
   
-\#Metric2 props
+\#Metric2 props  
 metric2.dashboardName=local-util  
 metric2.dashID=9b8LgEJZz  
 metric2.panelId=2  
