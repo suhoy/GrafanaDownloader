@@ -1,12 +1,12 @@
-### GrafanaDownloader
-Downloading rendered panels from Grafana for given time interval
+## GrafanaDownloader
+Download rendered panels from Grafana for given time interval  
 Works with Grafana v6.4.4 on Java 8
 
 ### Arguments
-* -start
-* -finish
-* -config
-* -out
+* -start	Start of time interval
+* -finish	End of time interval
+* -config	Path to config file
+* -out		Subfolder name for downloaded images
 ### Start example
 java -jar GrafanaDownloader.jar -start 2020-02-20T20:00 -finish 2020-02-20T23:00 -config C:\User\config.txt -out Report
 
