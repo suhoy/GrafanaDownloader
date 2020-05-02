@@ -3,10 +3,10 @@ Download rendered panels from Grafana for given time interval
 Works with Grafana v6.4.4 on Java 8
 
 ### Arguments
-* ***-start***	Start of time interval
-* ***-finish***	End of time interval
-* ***-config***	Path to config file
-* ***-out***		Subfolder name for downloaded images
+***-start***	Start of time interval
+***-finish***	End of time interval
+***-config***	Path to config file
+***-out***		Subfolder name for downloaded images
 ### Start example
 java -jar GrafanaDownloader.jar -start 2020-02-20T20:00 -finish 2020-02-20T23:00 -config C:\User\config.txt -out Report
 
@@ -17,7 +17,7 @@ grafana.host=localhost
 grafana.port=3000  
 grafana.login=admin  
 grafana.password=admin  
-grafana.token=token  
+grafana.token=eyJrIjoiajdWSzlkY2Z2Y0V5QjU0cmlkWU83S0tVVUIweE9VY00iLCJuIjoiYWRtaW4xIiwiaWQiOjF9  
   
 \#Metric props  
 panels.count=3  
@@ -41,7 +41,7 @@ metric2.panelId=2
 metric2.orgID=1  
 metric2.output=test2.jpeg  
   
-\#Metric2 props  
+\#Metric3 props  
 metric3.dashboardName=local-util  
 metric3.dashID=9b8LgEJZz  
 metric3.panelId=2  
