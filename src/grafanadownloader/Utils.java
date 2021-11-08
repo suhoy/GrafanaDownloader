@@ -45,7 +45,7 @@ public class Utils {
         for (String var : vars) {
             VarString += "&var-" + var.split(" ")[0] + "=" + var.split(" ")[1];
         }
-        String result = "" + protocol + "://" + host + ":" + port + "/render/d-solo/" + dashID + "/" + dashboardName + "?orgId=" + orgID + VarString + "&from=" + timeFrom + "&to=" + timeTo + "&panelId=" + panelId + "&width=" + width + "&height=" + height + "&tz=Europe%2FMoscow";
+        String result = "" + protocol + "://" + host + ":" + port + "/render/d-solo/" + dashID + "/" + dashboardName + "?orgId=" + orgID + VarString + "&from=" + timeFrom + "&to=" + timeTo + "&panelId=" + panelId + "&width=" + width + "&height=" + height;
 
         return result;
     }
