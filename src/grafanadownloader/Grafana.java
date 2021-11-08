@@ -34,7 +34,6 @@ public class Grafana {
         String urls;
         HttpURLConnection conn;
         
-        System.out.println(conf.vars.toString());
         File file = new File(System.getProperty("user.dir") + "\\" + conf.outFolder);
         file.mkdir();
         try {
