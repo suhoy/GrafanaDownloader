@@ -13,8 +13,8 @@ Works with Grafana v6.4.4 on Java 8
 ```java
 java -jar GrafanaDownloader.jar -start 2020-02-20T20:00 -finish 2020-02-20T23:00 -config C:\User\config.txt -out Report
 ```
-```python
 ### Config example
+```python
 #Connection props  
 grafana.protocol=http  
 grafana.host=localhost  
