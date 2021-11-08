@@ -11,19 +11,21 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 /**
  *
  * @author Sergey Sukhorukov
  */
 public class Props {
+
     private Properties prop;
     public String outFolder;
     public Map<String, String> params = new TreeMap<>();
     public ArrayList<Map<String, String>> metrics = new ArrayList<>();
-    
+    public ArrayList<Map<String, String>> vars = new ArrayList<>();
 
-    public Props(String config,String out) {
-        this.outFolder=out;
+    public Props(String config, String out) {
+        this.outFolder = out;
         try {
             InputStream input = new FileInputStream(config);
             prop = new Properties();
@@ -54,6 +56,17 @@ public class Props {
                 tempM.put("panelId", prop.getProperty("metric" + i + ".panelId"));
                 tempM.put("orgID", prop.getProperty("metric" + i + ".orgID"));
                 tempM.put("output", prop.getProperty("metric" + i + ".output"));
+                int j = 1;
+                while (true) {
+                    String name = prop.getProperty("metric" + i + ".var" + j + ".name");
+                    String value = prop.getProperty("metric" + i + ".var" + j + ".value");
+                    if (name == null || value == null) {
+                        break;
+                    }
+                    tempM.put("var" + j, name + " " + value);
+                    j++;
+                }
+
                 metrics.add(tempM);
             }
             System.out.println("\r\nMetrics:");
@@ -62,7 +75,7 @@ public class Props {
                 for (Map.Entry<String, String> entry : m.entrySet()) {
                     Object key = entry.getKey();
                     Object val = entry.getValue();
-                    System.out.println("metric" + outC + "." + key + "=" + val.toString());//
+                    System.out.println("metric" + outC + "." + key + "=" + val.toString());
                 }
                 System.out.print("\r\n");
                 outC++;
