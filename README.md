@@ -44,7 +44,11 @@ metric2.dashID=9b8LgEJZz
 metric2.panelId=2  
 metric2.orgID=1  
 metric2.output=test2.jpeg  
-  
+metrci2.var1.name=ip  
+metrci2.var1.value=123.44.55.66  
+metrci2.var2.name=type  
+metrci2.var2.value=balancer  
+
 #Metric3 props  
 metric3.dashboardName=local-util  
 metric3.dashID=9b8LgEJZz  
