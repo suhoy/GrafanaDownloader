@@ -31,6 +31,8 @@ public class GrafanaDownloader {
      */
     public static void main(String[] arg) {
         try {
+            System.out.println("\n==========GrafanaDownloader started==========");
+            
             ReadParams(arg);
             Files.createDirectories(Paths.get(String.valueOf(args.get("out").get(0))));
             Props p = new Props(args.get("config").get(0), args.get("out").get(0));
@@ -38,8 +40,10 @@ public class GrafanaDownloader {
             g.DownloadAll();
         } catch (Exception ex) {
             ex.printStackTrace();
+            System.out.println("\n==========GrafanaDownloader finished==========");
             System.exit(1);
         }
+        System.out.println("\n==========GrafanaDownloader finished==========");
         System.exit(0);
     }
 
