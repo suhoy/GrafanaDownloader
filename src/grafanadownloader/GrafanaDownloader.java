@@ -1,5 +1,7 @@
 package grafanadownloader;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +32,7 @@ public class GrafanaDownloader {
     public static void main(String[] arg) {
         try {
             ReadParams(arg);
+            Files.createDirectories(Paths.get(String.valueOf(args.get("out").get(0))));
             Props p = new Props(args.get("config").get(0), args.get("out").get(0));
             Grafana g = new Grafana(p, args.get("start").get(0), args.get("finish").get(0));
             g.DownloadAll();
