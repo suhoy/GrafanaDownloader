@@ -14,7 +14,7 @@ Works with Grafana v6.4.4 (grafana-image-renderer is required for Grafana v7+) o
 java -jar GrafanaDownloader.jar -start 2020-02-20T20:00 -finish 2020-02-20T23:00 -config C:\User\config.txt -out Report
 ```
 ### Config example
-```properties
+```python
 #Connection props  
 grafana.protocol=http  
 grafana.host=localhost  
