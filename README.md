@@ -1,6 +1,6 @@
 ## GrafanaDownloader
 Download rendered panels from Grafana for given time interval  
-Works with Grafana v6.4.4 on Java 8
+Works with Grafana v6.4.4 (grafana-image-renderer is required for Grafana v7+) on Java 8
 
 ### Arguments
 ```java
