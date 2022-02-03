@@ -66,9 +66,10 @@ public class Grafana {
                 
                 System.out.println("Link" + i + "=" + urls);
                 URL url = new URL(urls);
-                
+                                
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
+                conn.setConnectTimeout(1_000*60*5);
                 conn.setRequestProperty("Accept", "application/json");
                 conn.setRequestProperty("Authorization", "Bearer " + conf.params.get("grafana.token"));
               
