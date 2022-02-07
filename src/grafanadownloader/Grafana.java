@@ -69,9 +69,9 @@ public class Grafana {
 
                 
                 conn = (HttpURLConnection) url.openConnection();
-                conn.setRequestMethod("GET");
                 conn.setReadTimeout(1_000 * 60 * 5);
                 conn.setConnectTimeout(1_000 * 60 * 5);
+                conn.setRequestMethod("GET");
                 
 
                 conn.setRequestProperty("Accept", "application/json");
