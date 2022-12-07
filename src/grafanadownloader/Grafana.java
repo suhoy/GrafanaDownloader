@@ -34,7 +34,7 @@ public class Grafana {
         String urls;
         HttpURLConnection conn;
 
-        File file = new File(System.getProperty("user.dir") + "\\" + conf.outFolder);
+        File file = new File(System.getProperty("user.dir") + "/" + conf.outFolder);
         file.mkdir();
 
         for (int i = 1; i < conf.metrics.size() + 1; i++) {
@@ -83,7 +83,7 @@ public class Grafana {
                 }
 
                 BufferedImage image = ImageIO.read(conn.getInputStream());
-                String outImage = System.getProperty("user.dir") + "\\" + conf.outFolder + "\\" + conf.metrics.get(i - 1).get("output");
+                String outImage = System.getProperty("user.dir") + "/" + conf.outFolder + "/" + conf.metrics.get(i - 1).get("output");
                 //Also extension for image : conf.metrics.get(i - 1).get("output").split("\\.")[1]
                 ImageIO.write(image, "png", new File(outImage));
                 System.out.println("Succesfull for: " + outImage);
