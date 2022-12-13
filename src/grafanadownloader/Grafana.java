@@ -64,7 +64,7 @@ public class Grafana {
                         width,
                         vars);
 
-                System.out.println("Link" + i + "=" + urls);
+                System.out.println("Link" + i + "= " + urls);
                 URL url = new URL(urls);
 
                 
@@ -86,7 +86,7 @@ public class Grafana {
                 String outImage = System.getProperty("user.dir") + "/" + conf.outFolder + "/" + conf.metrics.get(i - 1).get("output");
                 //Also extension for image : conf.metrics.get(i - 1).get("output").split("\\.")[1]
                 ImageIO.write(image, "png", new File(outImage));
-                System.out.println("Succesfull for: " + outImage);
+                System.out.println("Image"+i+"= " + outImage+"\r\n");
                 conn.disconnect();
             } catch (Exception e) {
                 e.printStackTrace();
